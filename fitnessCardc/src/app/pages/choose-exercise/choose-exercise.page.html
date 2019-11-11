@@ -9,46 +9,60 @@
     </ion-toolbar>
   </ion-header>
 
-  <h1>Choisisser vos exercices : </h1>
+  <h1 *ngIf="settingService.language === 'Français'">Choisisser vos exercices : </h1>
+  <h1 *ngIf="settingService.language === 'English'">Choose your exercises : </h1>
   <ion-list>
 
     <ion-item>
       <ion-label>
         <ion-label class="red">♥️</ion-label>
       </ion-label>
-      <ion-select [(ngModel)]="exerciseCoeur">
-        <ion-select-option *ngFor="let exercice of exercisesList" [value]="exercice" required>{{exercice.title}}
-        </ion-select-option>
+      <ion-select [(ngModel)]="exerciseCoeur" *ngIf="settingService.language === 'Français'">
+        <ion-select-option *ngFor="let exercice of exercisesListFran" [value]="exercice" required>{{exercice.title}} </ion-select-option>
+      </ion-select>
+      <ion-select [(ngModel)]="exerciseCoeur" *ngIf="settingService.language === 'English'">
+          <ion-select-option *ngFor="let exercice of exercisesListEng" [value]="exercice" required>{{exercice.title}} </ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label class="black">♣️</ion-label>
-      <ion-select [(ngModel)]="exerciseTrelfe">
-        <ion-select-option *ngFor="let exercice of exercisesList" [value]="exercice" required>{{exercice.title}}
+      <ion-select [(ngModel)]="exerciseTrelfe" *ngIf="settingService.language === 'Français'">
+        <ion-select-option *ngFor="let exercice of exercisesListFran" [value]="exercice" required>{{exercice.title}}
         </ion-select-option>
+      </ion-select>
+      <ion-select [(ngModel)]="exerciseTrelfe" *ngIf="settingService.language === 'English'">
+          <ion-select-option *ngFor="let exercice of exercisesListEng" [value]="exercice" required>{{exercice.title}} </ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label class="red">♦️</ion-label>
-      <ion-select [(ngModel)]="exerciseCarreau">
-        <ion-select-option *ngFor="let exercice of exercisesList" [value]="exercice" required>{{exercice.title}}
+      <ion-select [(ngModel)]="exerciseCarreau" *ngIf="settingService.language === 'Français'">
+        <ion-select-option *ngFor="let exercice of exercisesListFran" [value]="exercice" required>{{exercice.title}}
         </ion-select-option>
+      </ion-select>
+      <ion-select [(ngModel)]="exerciseCarreau" *ngIf="settingService.language === 'English'">
+          <ion-select-option *ngFor="let exercice of exercisesListEng" [value]="exercice" required>{{exercice.title}} </ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label class="black">♠️</ion-label>
-      <ion-select [(ngModel)]="exercisePique">
-        <ion-select-option *ngFor="let exercice of exercisesList" [value]="exercice" required>{{exercice.title}}
+      <ion-select [(ngModel)]="exercisePique" *ngIf="settingService.language === 'Français'">
+        <ion-select-option *ngFor="let exercice of exercisesListFran" [value]="exercice" required>{{exercice.title}}
         </ion-select-option>
+      </ion-select>
+      <ion-select [(ngModel)]="exercisePique" *ngIf="settingService.language === 'English'">
+          <ion-select-option *ngFor="let exercice of exercisesListEng" [value]="exercice" required>{{exercice.title}} </ion-select-option>
       </ion-select>
     </ion-item>
 
   </ion-list>
+
   <div class="centerButton">
-    <button type="submit" (click)="sendChooseExercises()" [routerLink]="['/exercices']" class="next">Commencer</button>
+    <button *ngIf="settingService.language === 'Français'" type="submit" (click)="sendChooseExercises()" [routerLink]="['/slide-card']" class="next">Commencer</button>
+    <button *ngIf="settingService.language === 'English'" type="submit" (click)="sendChooseExercises()" [routerLink]="['/slide-card']" class="next">Start</button>
   </div>
 
 </ion-content>

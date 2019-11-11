@@ -1,3 +1,4 @@
+import { SettingService } from './../../shared/services/setting.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomePage implements OnInit{
 
 
-  constructor() {}
+  constructor(public settingService: SettingService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
 }

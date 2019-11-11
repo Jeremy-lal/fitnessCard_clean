@@ -1,9 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>exercisesLink</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content fullscreen>
 
-<ion-content>
+  <ion-header translucent>
+    <ion-toolbar>
+      <button (click)="backToHome()">
+        <ion-icon name="arrow-round-back"></ion-icon>Retour
+      </button>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h1>Liens vers vidéos explicatives exercices</h1>
+  <ion-list no-line>
+      <button ion-item *ngFor="let exercise of exercisesTab" class="linkButton"><a href="{{exercise.link}}">{{ exercise.title }}</a></button>
+  </ion-list>
 
 </ion-content>

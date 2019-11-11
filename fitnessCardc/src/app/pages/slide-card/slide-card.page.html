@@ -3,15 +3,25 @@
 
     <ion-slide *ngFor="let card of tabCardMix">
       <img [src]="card.img" />
-      <h2>Exercice: {{card.exercise.title}}</h2>
-      <p *ngIf="card.exercise.type === 'time'">Temps à effectuer: {{card.time}} secondes</p>
-      <p *ngIf="card.exercise.type === 'repetition'">Nombre de répétition: {{card.repetition}}</p>
+      <h2 *ngIf="settingService.language === 'Français'">Exercice: {{card.exercise.title}}</h2>
+      <h2 *ngIf="settingService.language === 'English'">Exercise: {{card.exercise.title}}</h2>
+
+      <div *ngIf="settingService.language === 'Français'"> 
+        <p *ngIf="card.exercise.type === 'time'">Temps à effectuer: {{card.time}} secondes</p>
+        <p *ngIf="card.exercise.type === 'repetition'">Nombre de répétition: {{card.repetition}}</p>
+      </div>
+
+      <div *ngIf="settingService.language === 'English'"> 
+        <p *ngIf="card.exercise.type === 'time'">Time to perform: {{card.time}} seconds</p>
+        <p *ngIf="card.exercise.type === 'repetition'">Number of repetition: {{card.repetition}}</p>
+      </div>
     </ion-slide>
 
   </ion-slides>
 
   <div class="endButton">
-    <button [routerLink]="['/congratulation']" class="end" (click)="this.stopTimer()">Finir</button>
+    <button *ngIf="settingService.language === 'Français'" [routerLink]="['/congratulation']" class="end" (click)="this.stopTimer()">Finir</button>
+    <button *ngIf="settingService.language === 'English'" [routerLink]="['/congratulation']" class="end" (click)="this.stopTimer()">End</button>
   </div>
 
 </ion-content>

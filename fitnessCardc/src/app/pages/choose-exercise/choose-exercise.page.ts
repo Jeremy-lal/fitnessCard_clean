@@ -1,8 +1,9 @@
+import { SettingService } from './../../shared/services/setting.service';
+import { Router } from '@angular/router';
 import { ExercisesService } from './../../shared/services/exercises.service';
 import { CardService } from './../../shared/services/card.service';
 import { Component, OnInit } from '@angular/core';
 import { Exercise } from 'src/app/shared/models/exercise';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-choose-exercise',
@@ -16,13 +17,16 @@ export class ChooseExercisePage implements OnInit {
   exercisePique: Exercise;
   exerciseCarreau: Exercise;
 
-  exercisesList: Exercise[];
+  exercisesListFran: Exercise[];
+  exercisesListEng: Exercise[];
 
 
-  constructor(private cardService: CardService, private exercisesService: ExercisesService, private router: Router ) { }
+  constructor(private cardService: CardService, private exercisesService: ExercisesService, private router: Router,
+              public settingService: SettingService) { }
 
   ngOnInit() {
-    this.exercisesList = this.exercisesService.exercises;
+    this.exercisesListFran = this.exercisesService.exercisesFran;
+    this.exercisesListEng = this.exercisesService.exercisesEng;
   }
 
   sendChooseExercises() {

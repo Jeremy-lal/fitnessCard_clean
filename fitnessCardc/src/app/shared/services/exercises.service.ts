@@ -12,7 +12,7 @@ export class ExercisesService {
   seconds = 0;
   timex;
 
-  exercises: Exercise[] = [
+  exercisesFran: Exercise[] = [
     {
       title: 'Pompe',
       type: 'repetition',
@@ -35,7 +35,31 @@ export class ExercisesService {
     },
   ];
 
-  exercisesAlpha: Exercise[] = this.exercises.sort(this.sortTab);
+  exercisesEng: Exercise[] = [
+    {
+      title: 'Press-ups',
+      type: 'repetition',
+      link: ''
+    },
+    {
+      title: 'Pull up',
+      type: 'repetition',
+      link: ''
+    },
+    {
+      title: 'Wall sit',
+      type: 'time',
+      link: ''
+    },
+    {
+      title: 'Plank',
+      type: 'time',
+      link: ''
+    },
+  ];
+
+  exercisesAlphaF: Exercise[] = this.exercisesFran.sort(this.sortTab);
+  exercisesAlphaE: Exercise[] = this.exercisesEng.sort(this.sortTab);
 
   constructor() { }
 
