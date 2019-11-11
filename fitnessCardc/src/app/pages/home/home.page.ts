@@ -1,5 +1,3 @@
-import { CardService } from './../../shared/services/card.service';
-import { Card } from './../../shared/models/card';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,11 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit{
 
-  tab: Card[];
-  constructor(private cardService: CardService) {}
 
-  ngOnInit(){
-      this.tab = this.cardService.createCardPackage('pompe','traction','gainage','chaise');
-      console.log(this.tab)
-  }
+  constructor() {}
+
+  ngOnInit() {}
 }

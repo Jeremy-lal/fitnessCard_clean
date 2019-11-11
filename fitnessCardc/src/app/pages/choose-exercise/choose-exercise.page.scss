@@ -1,0 +1,43 @@
+ion-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+    position: absolute;
+}
+ion-item {
+    margin: 5%;
+}
+
+h1{
+    text-align: center;
+    margin: 5%;
+}
+.centerButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+button {
+    background: transparent;
+    font-size: 1rem;
+}
+.next{
+    margin: 3%;
+    border-radius: 50px;
+    width: 80%;
+    font-size: 1.5rem;
+    color: white;
+    background-color: red;
+    align-self: center;
+    padding: 5px;;
+}
+
+.red{
+    color: red;
+    font-size: 3rem;
+}
+.black{
+    color: black;
+    font-size: 3rem;
+}

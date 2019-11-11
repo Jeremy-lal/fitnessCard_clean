@@ -1,0 +1,25 @@
+ion-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.endButton {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.end{
+    margin: 3%;
+    border-radius: 50px;
+    width: 30%;
+    font-size: 2rem;
+    color: white;
+    background-color: red;
+    padding: 5px;;
+}
+img {
+    height: 400px;
+}

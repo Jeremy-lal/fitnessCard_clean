@@ -24,3 +24,4 @@ const routes: Routes = [
   declarations: [ChooseExercisePage]
 })
 export class ChooseExercisePageModule {}
+

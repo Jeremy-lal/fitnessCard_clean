@@ -1,0 +1,44 @@
+button {
+    background: transparent;
+    font-size: 1rem;
+}
+ion-toolbar {
+    display: flex;
+    flex-direction: row;
+
+}
+
+h1{
+    text-align: center;
+    margin: 5%;
+    margin-bottom: 7%;
+}
+
+ion-item {
+    margin: 10%;
+}
+
+.centerButton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.link{
+    margin: 3%;
+    border-radius: 20px;
+    width: 80%;
+    font-size: 1.5rem;
+    color: white;
+    background-color: red;
+    align-self: center;
+}
+
+.valider {
+    margin: 3%;
+    border-radius: 20px;
+    width: 80%;
+    font-size: 1.5rem;
+    color: white;
+    background-color: red;
+    align-self: flex-end;
+}

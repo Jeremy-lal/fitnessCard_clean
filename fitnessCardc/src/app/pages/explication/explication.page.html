@@ -1,9 +1,31 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>explication</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content fullscreen>
 
-<ion-content>
+  <ion-header translucent>
+    <ion-toolbar>
+      <button (click)="backToHome()">
+        <ion-icon name="arrow-round-back"></ion-icon>Retour
+      </button>
+    </ion-toolbar>
+  </ion-header>
+
+  <h1>Explication</h1>
+
+  <div class="text">
+    <p>FitnessCard est une application permettant de personnaliser un circuit trainingsur la base de 4 exercices (4
+      couleurs de carte)</p>
+    <p>Le principe est simple :</p>
+
+    <ul>
+      <li>Choisisez un exercice pour chaque couleur</li>
+      <li>Appuyer sur commencer</li>
+      <li>Les cartes vont sortir aléatoirement avec une valeur (exemple: 3 de coeur a une valeur de 3</li>
+      <li>Réaliser le nombre de répétition lié à cette valeur ou effectué la durée de l'exercice si c'est un exercice de
+        type temps</li>elui ci est accecible dans les paramètre de l'application
+      <li>Lorsque c'est un exercice de type temps, le temps correspond à la valeur de la carte multiplié par le
+        multiplicateur de temps (par défaut 6). C</li>
+    </ul>
+
+    <p>Bon courage et amusé vous !</p>
+  </div>
 
 </ion-content>

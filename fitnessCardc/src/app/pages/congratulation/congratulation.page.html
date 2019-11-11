@@ -1,9 +1,11 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>congratulation</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content fullscreen>
+  <h1>Félécitation</h1>
 
-<ion-content>
+  <p>{{nbCardDo} cartes effectué</p>
+  <p>Temps du tour: {{timeToDoIt}</p>
+
+  <div class="endButton">
+    <button [routerLink]="['/home']" class="end">Acceuil</button>
+  </div>
 
 </ion-content>

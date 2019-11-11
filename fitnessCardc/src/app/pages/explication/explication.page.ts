@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-explication',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExplicationPage implements OnInit {
 
-  constructor() { }
+  backdropDismiss = false;
+  showBackdrop = false;
+  shouldPropagate = false;
+  
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  backToHome() {
+    this.router.navigateByUrl('/home');
+  }
 }

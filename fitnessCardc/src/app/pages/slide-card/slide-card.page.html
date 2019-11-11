@@ -1,9 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>slideCard</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content fullscreen padding scroll-y="false">
+  <ion-slides>
 
-<ion-content>
+    <ion-slide *ngFor="let card of tabCardMix">
+      <img [src]="card.img" />
+      <h2>Exercice: {{card.exercise.title}}</h2>
+      <p *ngIf="card.exercise.type === 'time'">Temps à effectuer: {{card.time}} secondes</p>
+      <p *ngIf="card.exercise.type === 'repetition'">Nombre de répétition: {{card.repetition}}</p>
+    </ion-slide>
+
+  </ion-slides>
+
+  <div class="endButton">
+    <button [routerLink]="['/congratulation']" class="end" (click)="this.stopTimer()">Finir</button>
+  </div>
 
 </ion-content>

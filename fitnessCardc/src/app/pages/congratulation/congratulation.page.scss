@@ -1,0 +1,26 @@
+h1{
+    font-size: 3rem;
+    margin-top: 30%;
+    margin-bottom: 30%;
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.endButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.end{
+    margin: 3%;
+    border-radius: 100px;
+    width: 40%;
+    font-size: 2rem;
+    color: white;
+    background-color: red;
+    padding: 5px;;
+}

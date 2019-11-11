@@ -1,9 +1,54 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>chooseExercise</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content fullscreen>
 
-<ion-content>
+  <ion-header translucent>
+    <ion-toolbar>
+      <button (click)="backToHome()">
+        <ion-icon name="arrow-round-back"></ion-icon>Retour
+      </button>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h1>Choisisser vos exercices : </h1>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>
+        <ion-label class="red">♥️</ion-label>
+      </ion-label>
+      <ion-select [(ngModel)]="exerciseCoeur">
+        <ion-select-option *ngFor="let exercice of exercisesList" [value]="exercice" required>{{exercice.title}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="black">♣️</ion-label>
+      <ion-select [(ngModel)]="exerciseTrelfe">
+        <ion-select-option *ngFor="let exercice of exercisesList" [value]="exercice" required>{{exercice.title}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="red">♦️</ion-label>
+      <ion-select [(ngModel)]="exerciseCarreau">
+        <ion-select-option *ngFor="let exercice of exercisesList" [value]="exercice" required>{{exercice.title}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="black">♠️</ion-label>
+      <ion-select [(ngModel)]="exercisePique">
+        <ion-select-option *ngFor="let exercice of exercisesList" [value]="exercice" required>{{exercice.title}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+  <div class="centerButton">
+    <button type="submit" (click)="sendChooseExercises()" [routerLink]="['/exercices']" class="next">Commencer</button>
+  </div>
 
 </ion-content>
