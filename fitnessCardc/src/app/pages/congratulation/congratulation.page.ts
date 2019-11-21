@@ -1,3 +1,4 @@
+import { ExercisesService } from 'src/app/shared/services/exercises.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CongratulationPage implements OnInit {
 
-  constructor() { }
+  hours: number;
+  mins: number;
+  seconds: number;
+
+  constructor(private exercisesService: ExercisesService) { }
 
   ngOnInit() {
+    this.seconds = this.exercisesService.seconds;
+    this.mins = this.exercisesService.mins;
+    this.hours = this.exercisesService.hours;
   }
 
 }

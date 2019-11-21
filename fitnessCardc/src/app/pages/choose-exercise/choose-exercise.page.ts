@@ -21,7 +21,7 @@ export class ChooseExercisePage implements OnInit {
   exercisesListEng: Exercise[];
 
 
-  constructor(private cardService: CardService, private exercisesService: ExercisesService, private router: Router,
+  constructor(private cardService: CardService, public exercisesService: ExercisesService, private router: Router,
               public settingService: SettingService) { }
 
   ngOnInit() {

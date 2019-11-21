@@ -7,9 +7,9 @@ import { Exercise } from '../models/exercise';
 })
 export class ExercisesService {
 
-  hours = 0;
-  mins = 0;
   seconds = 0;
+  mins = 0;
+  hours = 0;
   timex;
 
   exercisesFran: Exercise[] = [
@@ -64,24 +64,26 @@ export class ExercisesService {
   constructor() { }
 
   startTimer() {
-
-    this.timex = setTimeout(() => {
+    this.timex = setInterval(() => {
       this.seconds++;
-      if (this.seconds > 59) {
-        this.seconds = 0;
-        this.mins++;
+      if (this.seconds > 60) {
+        while (this.seconds >= 60) {
+          this.seconds -= 60;
+          this.mins++;
+        }
       }
-      if (this.mins > 59) {
-        this.mins = 0;
-        this.hours++;
+      if (this.mins > 60) {
+        while (this.mins >= 60) {
+          this.mins -= 60;
+          this.hours++
+            ;
+        }
       }
-
-      this.startTimer();
     }, 1000);
   }
 
   stopTimer() {
-    clearTimeout(this.timex);
+    clearInterval(this.timex);
   }
 
   sortTab(a, b) {

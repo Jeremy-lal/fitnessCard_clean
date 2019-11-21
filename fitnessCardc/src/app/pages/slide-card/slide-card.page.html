@@ -20,8 +20,8 @@
   </ion-slides>
 
   <div class="endButton">
-    <button *ngIf="settingService.language === 'Français'" [routerLink]="['/congratulation']" class="end" (click)="this.stopTimer()">Finir</button>
-    <button *ngIf="settingService.language === 'English'" [routerLink]="['/congratulation']" class="end" (click)="this.stopTimer()">End</button>
+    <button *ngIf="settingService.language === 'Français'" [routerLink]="['/congratulation']" class="end" (click)="stopTimer()">Finir</button>
+    <button *ngIf="settingService.language === 'English'" [routerLink]="['/congratulation']" class="end" (click)="stopTimer()">End</button>
   </div>
 
 </ion-content>
