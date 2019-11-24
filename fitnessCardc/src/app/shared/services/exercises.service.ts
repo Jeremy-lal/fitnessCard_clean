@@ -28,6 +28,46 @@ export class ExercisesService {
     {
       title: 'Gainage',
       type: 'time',
+    },
+    {
+      title: 'Jumping jacks',
+      type: 'time',
+    },
+    {
+      title: 'Abdo',
+      type: 'repetition',
+    },
+    {
+      title: 'Monté de chaise',
+      type: 'repetition',
+    },
+    {
+      title: 'Abdominaux avec Rotation',
+      type: 'repetition',
+    },
+    {
+      title: 'Burpees',
+      type: 'repetition',
+    },
+    {
+      title: 'Dips',
+      type: 'repetition',
+    },
+    {
+      title: 'Fente',
+      type: 'repetition',
+    },
+    {
+      title: 'Squat',
+      type: 'repetition',
+    },
+    {
+      title: 'Mountain climbers',
+      type: 'time',
+    },
+    {
+      title: 'Pont',
+      type: 'repetition',
     }
   ];
 
@@ -48,6 +88,46 @@ export class ExercisesService {
       title: 'Plank',
       type: 'time',
     },
+    {
+      title: 'Jumping jacks',
+      type: 'time',
+    },
+    {
+      title: 'Crunch',
+      type: 'repetition',
+    },
+    {
+      title: 'Step',
+      type: 'repetition',
+    },
+    {
+      title: 'Russian Twist',
+      type: 'repetition',
+    },
+    {
+      title: 'Burpees',
+      type: 'repetition',
+    },
+    {
+      title: 'Dips',
+      type: 'repetition',
+    },
+    {
+      title: 'Lunge',
+      type: 'repetition',
+    },
+    {
+      title: 'Squat',
+      type: 'repetition',
+    },
+    {
+      title: 'Mountain climbers',
+      type: 'time',
+    },
+    {
+      title: 'Bridge',
+      type: 'repetition',
+    }
   ];
 
   exercisesAlphaF: Exercise[] = this.exercisesFran.sort(this.sortTab);
