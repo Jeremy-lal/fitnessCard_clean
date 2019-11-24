@@ -16,45 +16,37 @@ export class ExercisesService {
     {
       title: 'Pompe',
       type: 'repetition',
-      link: ''
     },
     {
       title: 'Traction',
       type: 'repetition',
-      link: ''
     },
     {
       title: 'Chaise',
       type: 'time',
-      link: 'https://www.youtube.com/watch?v=65kc2AXgjeU'
     },
     {
       title: 'Gainage',
       type: 'time',
-      link: ''
-    },
+    }
   ];
 
   exercisesEng: Exercise[] = [
     {
       title: 'Press-ups',
       type: 'repetition',
-      link: ''
     },
     {
       title: 'Pull up',
       type: 'repetition',
-      link: ''
     },
     {
       title: 'Wall sit',
       type: 'time',
-      link: ''
     },
     {
       title: 'Plank',
       type: 'time',
-      link: ''
     },
   ];
 
@@ -89,6 +81,5 @@ export class ExercisesService {
   sortTab(a, b) {
     return (a.title > b.title) ? 1 : -1;
   }
-
 
 }

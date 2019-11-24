@@ -1,27 +1,30 @@
 <ion-header>
   <ion-toolbar>
-      <button (click)="backToHome()">
-          <ion-icon name="arrow-round-back"></ion-icon>Retour
-        </button>
+    <button (click)="backToHome()" class="back">
+      <ion-icon name="arrow-round-back"></ion-icon>Retour
+    </button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <h1 *ngIf="settingService.language === 'Français'">Choisissez votre niveau : </h1>
+  <h1 *ngIf="settingService.language === 'English'">Choose your level : </h1>
+
   <div class="centerButton" *ngIf="settingService.language === 'Français'">
     <button (click)="level1()">Débutant</button>
     <button (click)="level2()">Facile</button>
     <button (click)="level3()">Moyen</button>
-    <button (click)="level4()">Dur</button>
+    <button (click)="level4()">Difficile</button>
     <button (click)="level5()">Expert</button>
-</div>
+  </div>
 
-<div class="centerButton" *ngIf="settingService.language === 'English'">
+  <div class="centerButton" *ngIf="settingService.language === 'English'">
     <button (click)="level1()">Beginner</button>
     <button (click)="level2()">Easy</button>
     <button (click)="level3()">Middle</button>
     <button (click)="level4()">Hard</button>
     <button (click)="level5()">Expert</button>
-</div>
+  </div>
 
 </ion-content>

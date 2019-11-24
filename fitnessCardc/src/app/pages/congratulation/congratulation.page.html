@@ -1,7 +1,10 @@
 <ion-content fullscreen>
-  <h1>Félécitation</h1>
+  <h1 *ngIf="settingService.language === 'Français'" >Félicitation</h1>
+  <h1 *ngIf="settingService.language === 'English'">Congratulation</h1>
 
-  <p>Temps du tour: </p>
+  <p *ngIf="settingService.language === 'Français'">Temps du tour: </p>
+  <p *ngIf="settingService.language === 'English'">Lap time :</p>
+
   <p><label *ngIf="hours > 0">{{hours}} h : </label>{{mins}} min : {{seconds}} s</p>
 
   <div class="endButton">

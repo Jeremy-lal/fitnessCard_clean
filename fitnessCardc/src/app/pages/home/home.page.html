@@ -3,15 +3,18 @@
   <img src="../../../assets/Logo.png " alt="logo de fitnessCard">
 
   <div class="centerButton" *ngIf="settingService.language === 'Français'">
-      <button [routerLink]="['/choose-exercise']">Commencer</button>
-      <button [routerLink]="['/settings']"> Paramètres</button>
+      <button [routerLink]="['/choose-level']">Commencer</button>
       <button [routerLink]="['/explication']">Explication</button>
   </div>
 
   <div class="centerButton" *ngIf="settingService.language === 'English'">
-      <button [routerLink]="['/choose-exercise']">Start</button>
-      <button [routerLink]="['/settings']"> Settings</button>
+      <button [routerLink]="['/choose-level']">Start</button>
       <button [routerLink]="['/explication']">Explication</button>
+  </div>
+
+  <div class="drap">
+    <div (click)="changeToFranch()" class="fr"></div>
+    <div (click)="changeToEnglish()" class="en"></div>
   </div>
 
 </ion-content>

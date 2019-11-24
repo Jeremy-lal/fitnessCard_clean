@@ -21,22 +21,11 @@ export class SlideCardPage implements OnInit {
   ngOnInit() {
     this.cardService.MixTable(this.cardService.tabCard);
     this.tabCardMix = this.cardService.tabCardMix;
+    console.log(this.tabCardMix);
   }
 
   stopTimer() {
     this.exercisesService.stopTimer();
-  }
-
-  countdown(sec) {
-
-    const count = setInterval(() => {
-      sec--;
-      if (sec === 0) {
-        this.audio.play();
-        clearInterval(count);
-        return sec;
-      }
-    }, 1000);
   }
 
 }

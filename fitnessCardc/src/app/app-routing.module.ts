@@ -8,8 +8,6 @@ const routes: Routes = [
   { path: 'congratulation', loadChildren: './pages/congratulation/congratulation.module#CongratulationPageModule' },
   { path: 'slide-card', loadChildren: './pages/slide-card/slide-card.module#SlideCardPageModule' },
   { path: 'explication', loadChildren: './pages/explication/explication.module#ExplicationPageModule' },
-  { path: 'exercises-link', loadChildren: './pages/exercises-link/exercises-link.module#ExercisesLinkPageModule' },
-  { path: 'settings', loadChildren: './pages/settings/settings.module#SettingsPageModule' },
   { path: 'choose-level', loadChildren: './pages/choose-level/choose-level.module#ChooseLevelPageModule' },
 ];
 

@@ -2,9 +2,9 @@
   <ion-slides>
 
     <ion-slide *ngFor="let card of tabCardMix">
-      <img [src]="card.img" />
       <h2 *ngIf="settingService.language === 'Français'">Exercice: {{card.exercise.title}}</h2>
       <h2 *ngIf="settingService.language === 'English'">Exercise: {{card.exercise.title}}</h2>
+      <img [src]="card.img" />
 
       <div *ngIf="settingService.language === 'Français'"> 
         <p *ngIf="card.exercise.type === 'time'">Temps à effectuer: {{card.time}} secondes</p>
@@ -16,8 +16,6 @@
         <p *ngIf="card.exercise.type === 'repetition'">Number of repetition: {{card.repetition}}</p>
       </div>
       
-      <!-- <p *ngIf="card.exercise.type === 'time'">{{countdown(card.time)}} ezfrgtyuilo</p> -->
-
     </ion-slide>
 
   </ion-slides>

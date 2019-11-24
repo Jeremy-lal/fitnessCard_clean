@@ -74,7 +74,4 @@ export class CardService {
     this.tabCardMix = Tab;
   }
 
-  refresh() {
-    return this.tabCard;
-  }
 }
