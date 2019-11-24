@@ -68,6 +68,10 @@ export class ExercisesService {
     {
       title: 'Pont',
       type: 'repetition',
+    },
+    {
+      title: 'Montée de genoux',
+      type: 'time',
     }
   ];
 
@@ -127,6 +131,10 @@ export class ExercisesService {
     {
       title: 'Bridge',
       type: 'repetition',
+    },
+    {
+      title: 'High-stepping',
+      type: 'time',
     }
   ];
 
