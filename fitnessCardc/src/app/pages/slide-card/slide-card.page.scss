@@ -1,5 +1,6 @@
 ion-slide{
     display: flex;
+    height: 80%;
     flex-direction: column;
     justify-content: center;
     margin-top: 5%;
@@ -12,7 +13,6 @@ ion-slide{
 }
 
 .end{
-    margin: 3%;
     border-radius: 50px;
     width: 30%;
     font-size: 2rem;
@@ -21,7 +21,7 @@ ion-slide{
     padding: 5px;;
 }
 img {
-    height: 400px;
+    height: 70%;
 }
 
 h2 {
