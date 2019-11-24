@@ -20,6 +20,9 @@ export class ChooseExercisePage implements OnInit {
   exercisesListFran: Exercise[];
   exercisesListEng: Exercise[];
 
+  multiplicatorTime: number;
+  multiplicatorRep: number;
+
 
   constructor(private cardService: CardService, public exercisesService: ExercisesService, private router: Router,
               public settingService: SettingService) { }
@@ -27,14 +30,17 @@ export class ChooseExercisePage implements OnInit {
   ngOnInit() {
     this.exercisesListFran = this.exercisesService.exercisesFran;
     this.exercisesListEng = this.exercisesService.exercisesEng;
+    this.multiplicatorTime = this.cardService.multiplicatorTime;
+    this.multiplicatorRep = this.cardService.multiplicatorRep;
   }
 
   sendChooseExercises() {
-    this.cardService.createCardPackage(this.exerciseTrelfe, this.exerciseCoeur, this.exerciseCarreau, this.exercisePique);
+    this.cardService.createCardPackage(this.exerciseTrelfe, this.exerciseCoeur, this.exerciseCarreau, this.exercisePique,
+                                       this.multiplicatorTime, this.multiplicatorRep);
   }
 
   backToHome() {
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('choose-level');
   }
 
 }

@@ -14,6 +14,7 @@ import { ExercisesService } from 'src/app/shared/services/exercises.service';
 export class SlideCardPage implements OnInit {
 
   tabCardMix: Card[];
+  audio = new Audio('../../../assets/beep-09.mp3');
 
   constructor(private cardService: CardService, private exercisesService: ExercisesService, public settingService: SettingService) { }
 
@@ -25,4 +26,17 @@ export class SlideCardPage implements OnInit {
   stopTimer() {
     this.exercisesService.stopTimer();
   }
+
+  countdown(sec) {
+
+    const count = setInterval(() => {
+      sec--;
+      if (sec === 0) {
+        this.audio.play();
+        clearInterval(count);
+        return sec;
+      }
+    }, 1000);
+  }
+
 }

@@ -26,7 +26,7 @@ export class ExercisesService {
     {
       title: 'Chaise',
       type: 'time',
-      link: ''
+      link: 'https://www.youtube.com/watch?v=65kc2AXgjeU'
     },
     {
       title: 'Gainage',
