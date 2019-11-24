@@ -2,13 +2,9 @@
 
   <img src="../../../assets/Logo.png " alt="logo de fitnessCard">
 
-  <div class="centerButton" *ngIf="settingService.language === 'Français'">
-      <button [routerLink]="['/choose-level']">Commencer</button>
-      <button [routerLink]="['/explication']">Explication</button>
-  </div>
-
-  <div class="centerButton" *ngIf="settingService.language === 'English'">
-      <button [routerLink]="['/choose-level']">Start</button>
+  <div class="centerButton">
+      <button [routerLink]="['/choose-level']" *ngIf="settingService.language === 'Français'">Commencer</button>
+      <button [routerLink]="['/choose-level']" *ngIf="settingService.language === 'English'">Start</button>
       <button [routerLink]="['/explication']">Explication</button>
   </div>
 

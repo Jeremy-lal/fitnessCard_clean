@@ -8,7 +8,8 @@
   <p><label *ngIf="hours > 0">{{hours}} h : </label>{{mins}} min : {{seconds}} s</p>
 
   <div class="endButton">
-    <button [routerLink]="['/home']" class="end">Acceuil</button>
+    <button [routerLink]="['/home']" class="end" *ngIf="settingService.language === 'Français'">Acceuil</button>
+    <button [routerLink]="['/home']" class="end" *ngIf="settingService.language === 'English'" >Home</button>
   </div>
 
 </ion-content>

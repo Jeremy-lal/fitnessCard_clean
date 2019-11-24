@@ -10,22 +10,61 @@
 
   <h1>Explication</h1>
 
-  <div class="text">
-    <p>FitnessCard est une application permettant de personnaliser un circuit trainingsur la base de 4 exercices (4
-      couleurs de carte)</p>
+  <div class="text" *ngIf="settingService.language === 'Français'">
+    <p>FitnessCard est une application permettant de personnaliser un circuit training sur la base de 4 exercices (4
+      couleurs dans un paquet de cartes)</p>
     <p>Le principe est simple :</p>
 
     <ul>
+      <li>Choisisez un niveau de difficulté</li>
       <li>Choisisez un exercice pour chaque couleur</li>
-      <li>Appuyer sur commencer</li>
-      <li>Les cartes vont sortir aléatoirement avec une valeur (exemple: 3 de coeur a une valeur de 3</li>
-      <li>Réaliser le nombre de répétition lié à cette valeur ou effectué la durée de l'exercice si c'est un exercice de
-        type temps</li>elui ci est accecible dans les paramètre de l'application
-      <li>Lorsque c'est un exercice de type temps, le temps correspond à la valeur de la carte multiplié par le
-        multiplicateur de temps (par défaut 6). C</li>
+      <li>Appuyez sur commencer</li>
+      <li>Les cartes vont sortir aléatoirement avec une valeur (exemple: 3 de coeur a une valeur de 3)</li>
+      <li>Réaliser le temps ou le nombre de répétition indiqué. </li>
+      <li>Lorsque c'est un exercice de type temps, le temps correspond à la valeur de la carte multiplié par le multiplicateur de temps. </li>
+      <li>Lorsque c'est un exercice de type répétition, le nombre de répétition correspond à la valeur de la carte multiplié par le multiplicateur de répétitiion. </li>
+      <li>Lorsque vous avez fini l'exercise, faire défiler vers la gauche pour avoir le suivant</li>
+      <li>Quand vous avez fini le paquet de cartes ou que vous voulez arrêter, cliquez sur Finir</li>
     </ul>
 
-    <p>Bon courage et amusé vous !</p>
+    <h2>Valeur des multiplicateurs en fonction du niveau :</h2>
+    <ul>
+      <li>Débutant = répétition : x1, temps : x2</li>
+      <li>Facile = répétition : x1, temps : x4</li>
+      <li>Moyen = répétition : x1, temps : x6</li>
+      <li>Difficile = répétition : x2, temps : x8</li>
+      <li>Expert = répétition : x2, temps : x10</li>
+    </ul>
+
+    <p class="fin">Bon courage et amusé vous !</p>
+  </div>
+
+  <div class="text" *ngIf="settingService.language === 'English'">
+    <p>FitnessCard is an application to customize a circuit training based on 4 exercises (4 suits in a card deck)</p>
+    <p>The principle is simple :</p>
+
+    <ul>
+      <li>Choose your level</li>
+      <li>Choose un exercice for each suits</li>
+      <li>Click on Start</li>
+      <li>The cards will come out randomly with a value (example: 3 of heart and a value of 3)</li>
+      <li>Make the time or number of repetitions indicated.</li>
+      <li>When it is a time type exercise, the time corresponds to the value of the card multiplied by the time multiplier.</li>
+      <li>When it is a repetition exercise, the repetition number is the value of the card multiplied by the repetition multiplier.</li>
+      <li>When you have finished the exercise, scroll to the left to have the following</li>
+      <li>When you have finished the card deck or want to stop, click on Finish</li>
+    </ul>
+
+    <h2>Value of the multipliers according to the level :</h2>
+    <ul>
+      <li>Beginnner = repetition : x1, time : x2</li>
+      <li>Easy = repetition : x1, time : x4</li>
+      <li>Middle = repetition : x1, time : x6</li>
+      <li>Hard = repetition : x2, time : x8</li>
+      <li>Expert = repetition : x2, time : x10</li>
+    </ul>
+
+    <p class="fin">Good luck and have fun!</p>
   </div>
 
 </ion-content>

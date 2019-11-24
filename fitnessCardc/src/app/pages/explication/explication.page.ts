@@ -1,3 +1,4 @@
+import { SettingService } from './../../shared/services/setting.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -11,8 +12,8 @@ export class ExplicationPage implements OnInit {
   backdropDismiss = false;
   showBackdrop = false;
   shouldPropagate = false;
-  
-  constructor(private router: Router) { }
+
+  constructor(private router: Router, public settingService: SettingService) { }
 
   ngOnInit() {
   }
